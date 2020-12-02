@@ -85,3 +85,7 @@ document.querySelector("#submitUser").addEventListener("click",function(event){
     localStorage.setItem("scores",JSON.stringify(scoreList));
     //get scores to write to table. hint: use a for loop
 })
+for (var i=0; i <scoreList.length, i++) {
+
+}
+console.log("scores:" + (username.length));
