@@ -26,11 +26,14 @@ var questions = [
     },
     ]
 
+    var time=60
+
     var scoreList = JSON.parse(localStorage.getItem("scores")) || [];
 
     var score = 0
     var currentQuestion = 0
-
+    document.querySelector("#score").innerHTML=score; 
+    
     var text = document.querySelector("#question");
     //put shortcuts for other elements later
     var startButton = document.querySelector("#start")
@@ -41,6 +44,7 @@ startButton.addEventListener("click",function(event){
     intro.classList.add("hide");
     quizContent.classList.remove("hide");
     writeQuestion();
+    setInterval(startTimer,1000)
 
 })
 
@@ -62,6 +66,7 @@ function checkAnswer(event){
     if(event.target.innerHTML === questions[currentQuestion].correct){
         currentQuestion++;
         score++;
+        document.querySelector("#score").innerHTML=score;
         writeQuestion();
     }
     else{
@@ -72,7 +77,7 @@ function checkAnswer(event){
 
 //write an if statement, that if the current question number is in excess of the actual number of questions you have, to show the high scores and end the game
 
-document.querySelector("#highscores").classList.remove("hide");
+
 document.querySelector("#submit").classList.remove("hide");
 
 document.querySelector("#submitUser").addEventListener("click",function(event){
@@ -82,10 +87,30 @@ document.querySelector("#submitUser").addEventListener("click",function(event){
         score:score
     }
     scoreList.push(currentSession);
+    scoreList.sort(function(a,b){
+        return b.score-a.score;
+    });
     localStorage.setItem("scores",JSON.stringify(scoreList));
+    refreshScores();
     //get scores to write to table. hint: use a for loop
 })
-for (var i=0; i <scoreList.length, i++) {
+refreshScores();
+if(time<=0 || currentQuestion>=questions.length){
+    document.querySelector("#highscores").classList.remove("hide");
+    clearInterval(startTimer);
+    time=60;
+};
 
+function refreshScores(){
+for (var i=0; i <scoreList.length; i++){
+    document.querySelector("#scoreTable").innerHTML +=
+    `<tr>
+        <td>${scoreList[i].name}</td>
+        <td>${scoreList[i].score}</td>
+    </tr>`;
+};}
+console.log("scores:" + (score)/(username.length));
+
+var startTimer = function(){
+    time--;
 }
-console.log("scores:" + (username.length));

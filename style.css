@@ -21,4 +21,7 @@ body {
     text-align: center;
     color: mediumblue;
 }
+#score{
+    float:right;
+}
 
