@@ -74,7 +74,8 @@ function checkAnswer(event){
     }
 }
 
-//write an if statement, that if the current question number is in excess of the actual number of questions you have, to show the high scores and end the game
+
+//write an if statement to end game
 
 
 document.querySelector("#submit").classList.remove("hide");
