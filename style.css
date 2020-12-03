@@ -24,4 +24,7 @@ body {
 #score{
     float:right;
 }
+#Timer{
+    float: left;
+}
 

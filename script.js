@@ -21,8 +21,8 @@ var questions = [
     },
     {
         text: "In Terminal what does the command touch do?",
-        choices: ["opens a new file", "prints working directory", "clear output", "creats a new folder"],
-        correct: "creats a new folder"
+        choices: ["opens a new file", "prints working directory", "clear output", "creats a new file"],
+        correct: "creats a new file"
     },
     ]
 
@@ -35,7 +35,6 @@ var questions = [
     document.querySelector("#score").innerHTML=score; 
     
     var text = document.querySelector("#question");
-    //put shortcuts for other elements later
     var startButton = document.querySelector("#start")
     var intro = document.querySelector("#intro")
     var quizContent = document.querySelector("#quizContent")
@@ -92,7 +91,7 @@ document.querySelector("#submitUser").addEventListener("click",function(event){
     });
     localStorage.setItem("scores",JSON.stringify(scoreList));
     refreshScores();
-    //get scores to write to table. hint: use a for loop
+    
 })
 refreshScores();
 if(time<=0 || currentQuestion>=questions.length){
