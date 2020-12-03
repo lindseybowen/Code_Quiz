@@ -113,4 +113,6 @@ console.log("scores:" + (score)/(username.length));
 
 var startTimer = function(){
     time--;
+    document.querySelector("#time").textContent=time
+    console.log(time)
 }

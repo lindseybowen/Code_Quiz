@@ -24,9 +24,8 @@ body {
 #score{
     float:right;
 }
-Div.Container {
-min-height: auto;
-display: table-cell;
-vertical-align: middle;
+#time{
+   float: left;
 }
+
 
