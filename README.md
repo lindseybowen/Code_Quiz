@@ -6,4 +6,4 @@ The quiz will end when all questions are answered or when you complete all quest
 You can save your score by in putting your initials 
 Below is the link for the Code Quiz 
 https://lindseybowen.github.io/Code_Quiz/.
-You will also find below a picture of what the application looks like
+You will also find below a pictures of the application! 
