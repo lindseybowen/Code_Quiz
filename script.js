@@ -48,7 +48,7 @@ startButton.addEventListener("click",function(event){
 })
 
 function writeQuestion(){
-    text.innerHTML=questions[currentQuestion].text;
+    text.innerHTML=questions[currentQuestion].text
     document.querySelector("#question1").innerHTML=questions[currentQuestion].choices[0]
     document.querySelector("#question2").innerHTML=questions[currentQuestion].choices[1]
     document.querySelector("#question3").innerHTML=questions[currentQuestion].choices[2]
@@ -76,7 +76,6 @@ function checkAnswer(event){
 
 
 //write an if statement to end game
-
 
 document.querySelector("#submit").classList.remove("hide");
 

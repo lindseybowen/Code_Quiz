@@ -16,10 +16,11 @@ input {
 button {
     text-align: center;
     color: mediumblue;
+    border: black;
 }
 body {
     text-align: center;
-    color: mediumblue;
+    color: black;
 }
 #score{
     float:right;
