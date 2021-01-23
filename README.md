@@ -8,3 +8,9 @@ You can save your score by putting in your initials.
 ## Below is the link for the Code Quiz 
 * https://lindseybowen.github.io/Code_Quiz/
 
+## Screen Shots 
+![](images/frontpage.png)
+![](images/questions.png)
+![](images/enterscore.png)
+![](images/scores.png)
+
